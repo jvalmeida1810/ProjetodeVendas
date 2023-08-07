@@ -86,27 +86,39 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <label for="InputCep">Cep</label>
+                                                        <label for="InputCep    ">CEP</label>
                                                         <input type="text" class="form-control" id="clieCep" name="clieCep">
                                                     </div>
                                                 </div>
                                             </div>
-                                                <div class="form-group">
-                                                    <label class="custom-control custom-radio">
-                                                        <input type="radio" class="custom-control-input">
-                                                        <span class="custom-control-label">&nbsp;Remember me</span>
-                                                    </label>
+
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <div class="form-group">
+                                                        <label for="InputCidade">Cidade</label>
+                                                        <input type="text" class="form-control" id="crieCidade" name="crieCidade">
+                                                    </div>
                                                 </div>
-                                                <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                                <button class="btn btn-light">Cancel</button>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="InpuEstado">Estado</label>
+                                                        <input type="text" class="form-control" id="clieEstado" name="clieEstado">
+                                                    </div>
+                                                </div>                              
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                        <label for="InputReferencia">Ponto de referência</label>
+                                                        <input type="text" class="form-control" id="clieReferencia" name="clieReferencia">
+                                                    </div>
+                                                
+                                                <button type="submit" class="btn btn-success mr-2">Salvar</button>
                                         </form>
                                         <!-- Fim do form inserir clientes -->
 
 
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                  
                                     </div>
                                 </div>
                             </div>
