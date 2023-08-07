@@ -35,11 +35,86 @@
                         <div class="card-header">
                             <h3>
                                 <!-- Botão para acionar modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
-                                    Cadrastar novo cliente
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalInserirCliente">
+                                    Cadrastar Novo Cliente
                                 </button>
                             </h3>
                         </div>
+                        <!-- Inicio do modal inserir novo cliente -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalInserirCliente" tabindex="-1" role="dialog" aria-labelledby="InserirCliente" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Cadrasto de Cliente</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Inicio do form inserir clientes -->
+                                        <form class="forms-InserirCliente">
+                                            <div class="form-group">
+                                                <label for="InputCPF">CPF</label>
+                                                <input type="text" class="form-control" id="clieCPF" name="clieCPF">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="InputNomeCliente">Nome</label>
+                                                <input type="text" class="form-control" id="crieNome" name="crieNome">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="InputEndereco">Endereço</label>
+                                                        <input type="text" class="form-control" id="crieEndereco" name="crieEndereco">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="InputNumero">Número</label>
+                                                        <input type="text" class="form-control" id="clieNumero" name="clieNumero">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label for="InputBairro">Bairro</label>
+                                                        <input type="text" class="form-control" id="crieBairro" name="crieBairro">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="InputCep">Cep</label>
+                                                        <input type="text" class="form-control" id="clieCep" name="clieCep">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="form-group">
+                                                    <label class="custom-control custom-radio">
+                                                        <input type="radio" class="custom-control-input">
+                                                        <span class="custom-control-label">&nbsp;Remember me</span>
+                                                    </label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                                <button class="btn btn-light">Cancel</button>
+                                        </form>
+                                        <!-- Fim do form inserir clientes -->
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fim do modal inserir novo cliente -->
+
+
                         <div class="card-body">
                             <table id="data_table" class="table">
                                 <thead>
