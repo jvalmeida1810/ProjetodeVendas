@@ -57,23 +57,23 @@
                                          method="POST">     
                                             <div class="form-group">
                                                 <label for="InputCPF">CPF</label>
-                                                <input type="text" class="form-control" id="clieCPF" name="clieCPF">
+                                                <input type="text" class="form-control" id="clieCPF" name="clieCPF" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="InputNomeCliente">Nome</label>
-                                                <input type="text" class="form-control" id="crieNome" name="crieNome">
+                                                <input type="text" class="form-control" id="clieNome" name="clieNome" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-8">
                                                     <div class="form-group">
                                                         <label for="InputEndereco">Endereço</label>
-                                                        <input type="text" class="form-control" id="crieEndereco" name="crieEndereco">
+                                                        <input type="text" class="form-control" id="clieEndereco" name="clieEndereco" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label for="InputNumero">Número</label>
-                                                        <input type="text" class="form-control" id="clieNumero" name="clieNumero">
+                                                        <input type="text" class="form-control" id="clieNumero" name="clieNumero" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,13 +82,13 @@
                                                 <div class="col-md-8">
                                                     <div class="form-group">
                                                         <label for="InputBairro">Bairro</label>
-                                                        <input type="text" class="form-control" id="crieBairro" name="crieBairro">
+                                                        <input type="text" class="form-control" id="clieBairro" name="clieBairro" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <label for="InputCep    ">CEP</label>
-                                                        <input type="text" class="form-control" id="clieCep" name="clieCep">
+                                                        <label for="InputCep">CEP</label>
+                                                        <input type="text" class="form-control" id="clieCep" name="clieCep" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,20 +97,20 @@
                                                 <div class="col-md-10">
                                                     <div class="form-group">
                                                         <label for="InputCidade">Cidade</label>
-                                                        <input type="text" class="form-control" id="crieCidade" name="crieCidade">
+                                                        <input type="text" class="form-control" id="clieCidade" name="clieCidade" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <div class="form-group">
                                                         <label for="InpuEstado">Estado</label>
-                                                        <input type="text" class="form-control" id="clieEstado" name="clieEstado">
+                                                        <input type="text" class="form-control" id="clieEstado" name="clieEstado" required>
                                                     </div>
                                                 </div>                              
                                             </div>
                                             
                                             <div class="form-group">
                                                         <label for="InputReferencia">Ponto de referência</label>
-                                                        <input type="text" class="form-control" id="clieReferencia" name="clieReferencia">
+                                                        <input type="text" class="form-control" id="clieReferencia" name="clieReferencia" required>
                                                     </div>
                                                 
                                                 <button type="submit" class="btn btn-success mr-2">Salvar</button>
