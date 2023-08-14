@@ -53,7 +53,8 @@
                                     </div>
                                     <div class="modal-body">
                                         <!-- Inicio do form inserir clientes -->
-                                        <form class="forms-InserirCliente">
+                                        <form class= "forms-sample" id = "inserirCliente" name="inserirCliente" action="<?php echo base_url($this->router->fetch_class() .'/insert/');?>"
+                                         method="POST">     
                                             <div class="form-group">
                                                 <label for="InputCPF">CPF</label>
                                                 <input type="text" class="form-control" id="clieCPF" name="clieCPF">
