@@ -1,11 +1,18 @@
 <?php $this->load->view('layout/header.php') ?>
 <div class="page-wrap">
     <?php $this->load->view('layout/sidebar.php') ?>
+
     <div class="main-content">
         <div class="container-fluid">
             <div class="page-header">
-
-
+            <?php if ($this->session->sucesso):?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Registro inserido com sucesso</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
                 <div class="row align-items-end">
                     <div class="col-lg-8">
                         <div class="page-header-title">
@@ -133,18 +140,28 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th class="nosort">Avatar</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Nome</th>
+                                        <th>CPF</th>
                                         <th class="nosort">&nbsp;</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                            <!-- 
+                            [clieid] => 1
+                            [clieCPF] => 00009090
+                            [clieNome] => Joao
+                            [clieEndereco] => Rua Francisco de Sousa
+                            [clieNumero] => 218
+                            [clieBairro] => odjod
+                            [clieCEP] => 58830000
+                            [clieCidade] => dede
+                            [clieEstado] => PB
+                            [clieReferencia] => Perto do Postinho -->
+                            <?php foreach($clientes as $cliente):?>
                                     <tr>
-                                        <td>001</td>
-                                        <td><img src="../img/users/1.jpg" class="table-user-thumb" alt=""></td>
-                                        <td>Erich Heaney</td>
-                                        <td>erich@example.com</td>
+                                        <td><?php echo $cliente->clieid;?></td>
+                                        <td><?php echo $cliente->clieNome;?></td>
+                                        <td><?php echo $cliente->clieCPF;?></td>
                                         <td>
                                             <div class="table-actions">
                                                 <a href="#"><i class="ik ik-eye"></i></a>
@@ -153,58 +170,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>002</td>
-                                        <td><img src="../img/users/2.jpg" class="table-user-thumb" alt=""></td>
-                                        <td>Abraham Douglas</td>
-                                        <td>jgraham@example.com</td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <a href="#"><i class="ik ik-eye"></i></a>
-                                                <a href="#"><i class="ik ik-edit-2"></i></a>
-                                                <a href="#"><i class="ik ik-trash-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>003</td>
-                                        <td><img src="../img/users/3.jpg" class="table-user-thumb" alt=""></td>
-                                        <td>Roderick Simonis</td>
-                                        <td>grant.simonis@example.com</td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <a href="#"><i class="ik ik-eye"></i></a>
-                                                <a href="#"><i class="ik ik-edit-2"></i></a>
-                                                <a href="#"><i class="ik ik-trash-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>004</td>
-                                        <td><img src="../img/users/4.jpg" class="table-user-thumb" alt=""></td>
-                                        <td>Christopher Henry</td>
-                                        <td>henry.chris@example.com</td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <a href="#"><i class="ik ik-eye"></i></a>
-                                                <a href="#"><i class="ik ik-edit-2"></i></a>
-                                                <a href="#"><i class="ik ik-trash-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>005</td>
-                                        <td><img src="../img/users/5.jpg" class="table-user-thumb" alt=""></td>
-                                        <td>Sonia Wilkinson</td>
-                                        <td>boyle.aglea@example.com</td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <a href="#"><i class="ik ik-eye"></i></a>
-                                                <a href="#"><i class="ik ik-edit-2"></i></a>
-                                                <a href="#"><i class="ik ik-trash-2"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    <<?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

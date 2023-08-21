@@ -7,7 +7,11 @@ class Clientes extends CI_Controller
 
     public function index()
     {
-        $this->load->view('clientes/index.php');
+        $data = array(
+            'clientes'=>$this->core_model->get_all('clientes'),
+        );
+
+        $this->load->view('clientes/index.php', $data);
     }
 
     public function insert()
@@ -33,6 +37,9 @@ class Clientes extends CI_Controller
 
         if ($this->core_model->insert('clientes', $data)) {
             $this->session->set_flashdata('sucesso', 'Registro inserido com sucesso.');
+            // echo '<pre>';
+            // print_r($this->session);
+            // exit();
         } else {
             $this->session->set_flashdata('error', 'Não foi possivel inserir o registro.');
         }
